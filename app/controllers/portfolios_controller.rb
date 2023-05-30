@@ -26,7 +26,6 @@ class PortfoliosController < ApplicationController
   def edit
     @portfolio = Portfolio.find(params[:id])
   end
-  
 
   def update
     @portfolio = Portfolio.find(params[:id])
@@ -53,5 +52,4 @@ class PortfoliosController < ApplicationController
     params.require(:portfolio).permit(:title, :subtitle, :body)
   end
 
-  
 end
