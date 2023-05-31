@@ -1,14 +1,12 @@
-<h1> Portfolios Items <h1>
+<h1> Angular Portfolios Items <h1>
 
 <%= link_to "Create Portfolio", new_portfolio_path %>
 
-<% @portfolios.each do |portfolios| %>
+<% @angular_portfilios.each do |portfolios| %>
   <p><%= link_to portfolios.title, portfolio_show_path(portfolios) %></p>
   <p><%= portfolios.subtitle %></p>
   <p><%= portfolios.body %></p>
   <%= image_tag portfolios.thumb_image unless portfolios.thumb_image.nil? %>
   <%= link_to "Edit", edit_portfolio_path(portfolios) %>
   <%= button_to "Delete", portfolio_path(portfolios), method: :delete, data: { confirm: 'Are you sure?'} %>
-  
 <% end %>
-<%= link_to "Angular", angular_items_path(@portfolios) %>
