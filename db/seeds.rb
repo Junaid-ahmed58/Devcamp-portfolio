@@ -42,10 +42,18 @@ end
 
 puts "9 portfolio created"
 
+3.times do |technology|
+  Portfolio.last.technologies.create!(
+    name: "Technology 1, #{technology}"
+  )
+end
+
+puts "3 technologies created"
+
 5.times do |skill|
   Skill.create!(
     title: "Rails #{skill}",
-    percent_utilize: 5,
+    percent_utilize: 5
   )
 end
 

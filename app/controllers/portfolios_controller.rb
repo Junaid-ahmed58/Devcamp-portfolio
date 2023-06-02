@@ -1,6 +1,6 @@
 class PortfoliosController < ApplicationController
   def index
-    @portfolios = Portfolio.all
+    @portfolios = Portfolio.ruby_on_rails_portfolio
   end
 
   def angular
