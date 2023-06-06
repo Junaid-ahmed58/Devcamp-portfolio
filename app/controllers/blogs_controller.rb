@@ -2,16 +2,22 @@ class BlogsController < ApplicationController
   before_action :set_blog, only: %i[ show edit update destroy toggle_status]
 
   def index
-    @blogs = Blog.all  
+    @blogs = Blog.all
+    @page_title = "My Portfolio Blog"
   end
 
-  def show; end
+  def show
+    @page_title = @blog.title
+    @seo_keywords = @blog.body
+  end
 
   def new
     @blog = Blog.new
   end
 
-  def edit; end
+  def edit
+    @page_title = @blog.title
+  end
 
   def create
     @blog = Blog.new(blog_params)

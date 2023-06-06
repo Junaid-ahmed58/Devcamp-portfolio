@@ -1,6 +1,7 @@
 class PortfoliosController < ApplicationController
   def index
     @portfolios = Portfolio.all
+    @page_title = "My Portfolios"
   end
 
   def angular
