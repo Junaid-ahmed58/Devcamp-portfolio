@@ -2,12 +2,6 @@
 
 <%= link_to "Create Portfolio", new_portfolio_path %>
 
-<% @portfolios.each do |portfolios| %>
-  <p><%= link_to portfolios.title, portfolio_show_path(portfolios) %></p>
-  <p><%= portfolios.subtitle %></p>
-  <p><%= portfolios.body %></p>
-  <%= image_tag portfolios.thumb_image unless portfolios.thumb_image.nil? %>
-  <%= link_to "Edit", edit_portfolio_path(portfolios) %>
-  <%= button_to "Delete", portfolio_path(portfolios), method: :delete, data: { confirm: 'Are you sure?'} %>
-<% end %>
+<%= render @portfolios %>
+
 <%= link_to "Angular", angular_items_path(@portfolios) %>
