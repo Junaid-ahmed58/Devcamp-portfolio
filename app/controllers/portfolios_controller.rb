@@ -1,4 +1,5 @@
 class PortfoliosController < ApplicationController
+  before_action :set_portfolio, only:[:edit, :update, :show, :destroy]
   layout "portfolio"
   def index
     @portfolios = Portfolio.all
@@ -9,9 +10,7 @@ class PortfoliosController < ApplicationController
     @angular_portfilios = Portfolio.angular
   end
 
-  def show
-    @portfolio = Portfolio.find(params[:id])
-  end
+  def show; end
 
   def new
     @portfolio = Portfolio.new
@@ -31,12 +30,10 @@ class PortfoliosController < ApplicationController
   end
 
   def edit
-    @portfolio = Portfolio.find(params[:id])
     3.times { @portfolio.technologies.build }
   end
 
   def update
-    @portfolio = Portfolio.find(params[:id])
 
     respond_to do |format|
       if @portfolio.update(portfolio_params)
@@ -48,7 +45,7 @@ class PortfoliosController < ApplicationController
   end
 
   def destroy
-    @portfolio = Portfolio.find(params[:id])
+    
     @portfolio.destroy
 
     respond_to do |format|
@@ -57,6 +54,10 @@ class PortfoliosController < ApplicationController
   end
 
   private
+
+  def set_portfolio
+    @portfolio = Portfolio.find(params[:id])
+  end
 
   def portfolio_params
     params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name])
