@@ -49,6 +49,8 @@ gem 'devise', '~> 4.9', '>= 4.9.2'
 
 gem 'byebug'
 
+gem 'petergate', '~> 1.6', '>= 1.6.3'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
