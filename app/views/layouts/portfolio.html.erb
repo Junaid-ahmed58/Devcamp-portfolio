@@ -8,7 +8,7 @@
 
     <meta name="keywords" content= "<%= @seo_keywords %>" />
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "portfolios", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
@@ -16,13 +16,13 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <%= render "shared/navbar", location: 'top' %>
-
     <%= authentication_helper %>
 
     <%= yield %>
 
-   <%= source_hepler("application") %>
+    <%= render "shared/navbar", location: 'top' %>
+
+    <%= source_hepler("application") %>
 
   </body>
 </html>
