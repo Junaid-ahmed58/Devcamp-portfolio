@@ -51,6 +51,7 @@ gem 'byebug'
 
 gem 'petergate', '~> 1.6', '>= 1.6.3'
 
+gem 'bootstrap', '~> 5.3.0.alpha3'
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -80,3 +81,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "cssbundling-rails", "~> 1.1"
