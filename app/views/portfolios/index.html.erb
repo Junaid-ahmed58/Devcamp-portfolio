@@ -1,7 +1,10 @@
-<h1> Portfolios Items <h1>
+<div class="album text-muted ">
+  <div class="container">
+    <div class="row">
+      <%= render @portfolios %>
+      <%= link_to "Angular", angular_items_path(@portfolios) %>
+    </div>
+  </div>
+</div>
 
-<%= link_to "Create Portfolio", new_portfolio_path if logged_in?(:site_admin)  %>
 
-<%= render @portfolios %>
-
-<%= link_to "Angular", angular_items_path(@portfolios) %>
