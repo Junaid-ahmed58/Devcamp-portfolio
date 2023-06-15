@@ -1,21 +1,5 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Blogs</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Date</th>
-      <th>Body</th>
-      <th>Status</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <%= render @blogs %>
-  </tbody>
-</table>
-
-
-<%= link_to "New blog", new_blog_path if logged_in?(:site_admin) %>
+<div class="col-sm-8 blog-main">
+  <%= render @blogs %>
+  
+  <%= paginate @blogs %>
+</div>

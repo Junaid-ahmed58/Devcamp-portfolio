@@ -52,6 +52,10 @@ gem 'byebug'
 gem 'petergate', '~> 1.6', '>= 1.6.3'
 
 gem 'bootstrap', '~> 5.3.0.alpha3'
+
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.8'
+
+gem 'kaminari', '~> 1.2', '>= 1.2.2'
 # Use Sass to process CSS
 # gem "sassc-rails"
 
