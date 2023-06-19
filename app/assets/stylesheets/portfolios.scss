@@ -1,12 +1,10 @@
 @import "bootstrap";
 
 body {
-  min-height: 75rem; /* Can be removed; just added for demo purposes */
 }
 
 .navbar {
   margin-bottom: 0;
-  background-color: #428bca;
 
 }
 
@@ -14,14 +12,16 @@ body {
   padding-top: 6rem;
   padding-bottom: 6rem;
   margin-bottom: 0;
-  background-color: #fff;
+  color: lightslategrey;
 }
 
 .jumbotron p:last-child {
+  color: lightslategrey;
   margin-bottom: 0;
 }
 
 .jumbotron-heading {
+  color: lightslategrey;
   font-weight: 300;
 }
 
@@ -30,10 +30,8 @@ body {
 }
 
 .album {
-  min-height: 50rem; /* Can be removed; just added for demo purposes */
   padding-top: 3rem;
   padding-bottom: 3rem;
-  background-color: #f7f7f7;
 }
 
 .card {
@@ -69,4 +67,23 @@ footer p {
 
 .portfolio{
   padding-left: 42rem;
+}
+
+.lead-text-muted{
+  color: lightslategrey;
+}
+
+#background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: image-url('bbackground') no-repeat;
+  background-size: cover;
 }
