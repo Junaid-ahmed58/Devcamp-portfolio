@@ -65,6 +65,8 @@ gem 'carrierwave-aws', '~> 1.5'
 
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'  
 
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
