@@ -56,6 +56,15 @@ gem 'bootstrap', '~> 5.3.0.alpha3'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.8'
 
 gem 'kaminari', '~> 1.2', '>= 1.2.2'
+
+gem 'carrierwave'
+
+gem 'mini_magick', '~> 4.5', '>= 4.5.1'
+
+gem 'carrierwave-aws', '~> 1.5'
+
+gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'  
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 

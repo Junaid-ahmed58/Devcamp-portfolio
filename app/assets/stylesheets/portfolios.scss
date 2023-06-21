@@ -73,6 +73,10 @@ footer p {
   color: lightslategrey;
 }
 
+.col-md-5 {
+  color: lightslategrey;
+}
+
 #background {
   position: fixed;
   top: 50%;
@@ -84,6 +88,6 @@ footer p {
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: image-url('bbackground') no-repeat;
+  background: image-url('background') no-repeat;
   background-size: cover;
 }
