@@ -16,7 +16,7 @@ class PortfoliosController < ApplicationController
 
   def new
     @portfolio = Portfolio.new
-    3.times { @portfolio.technologies.build }
+    @portfolio.technologies.build
   end
 
   def create
@@ -54,6 +54,17 @@ class PortfoliosController < ApplicationController
       format.html { redirect_to portfolios_path,notice: "Portfolio was successfully destroyed." }
     end
   end
+
+  def update_positions
+    params[:portfolio_ids].each_with_index do |portfolio_id, index|
+      Portfolio.find(portfolio_id).update(position: index + 1)
+    end
+
+    respond_to do |format|
+      format.js { render js: 'console.log("Positions updated!");' }
+    end
+  end
+
 
   private
 

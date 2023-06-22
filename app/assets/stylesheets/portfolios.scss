@@ -12,16 +12,16 @@ body {
   padding-top: 6rem;
   padding-bottom: 6rem;
   margin-bottom: 0;
-  color: lightslategrey;
+  color: rgb(255, 36, 36);
 }
 
 .jumbotron p:last-child {
-  color: lightslategrey;
+  color: rgb(255, 36, 36);
   margin-bottom: 0;
 }
 
 .jumbotron-heading {
-  color: lightslategrey;
+  color: rgb(255, 36, 36);
   font-weight: 300;
 }
 
@@ -63,6 +63,7 @@ footer p {
 
 .portfolio-form{
   padding: 20px;
+  color: rgb(255, 36, 36);
 }
 
 .portfolio{
@@ -70,11 +71,15 @@ footer p {
 }
 
 .lead-text-muted{
-  color: lightslategrey;
+  color: rgb(255, 36, 36);
 }
 
 .col-md-5 {
-  color: lightslategrey;
+  color: rgb(255, 36, 36);
+}
+
+.col-md-7{
+  padding-right: 10px;
 }
 
 #background {

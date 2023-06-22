@@ -1,7 +1,9 @@
 <div class="container">
   <div class="row">
     <div class="col-md-7">
-      <%= image_tag @portfolio.main_image %>
+      <%if @portfolio.main_image.attached? %>
+        <%= image_tag @portfolio.main_image , width: '80%' %>
+      <% end %>
     </div>
 
     <div class="col-md-5">
@@ -18,7 +20,9 @@
       <% @portfolio.technologies.each do |t| %>
       <p><%= t.name %></p>
       <% end %>
-
+      <hr>
+      <%= link_to "Edit", edit_portfolio_url %> /  
+      <%= button_to "Destroy", @portfolio, method: :delete %>
       <%= link_to "View All Portfoilos", portfolios_path %>
     </div>
   </div>

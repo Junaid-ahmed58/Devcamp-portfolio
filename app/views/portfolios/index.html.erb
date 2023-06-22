@@ -1,6 +1,8 @@
 <div class="album text-muted ">
   <div class="container">
-    <div class="row">
+    <div id="sortable-portfolios" class="row">
+      <%= link_to "Create new Portfolio", new_portfolio_path %>
+      <hr>
       <%= render @portfolios %>
       <%= link_to "Angular", angular_items_path(@portfolios) %>
     </div>
